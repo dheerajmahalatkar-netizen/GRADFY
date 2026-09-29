@@ -1,0 +1,10 @@
+{
+  "name": "GRADFY",
+  "description": "Intelligent Onion Quality Assessment, Grading & Traceability Platform with AI Explainability, Smart Capture, and Offline Verification",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

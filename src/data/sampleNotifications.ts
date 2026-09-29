@@ -1,0 +1,80 @@
+import { AppNotification, AuditLog } from '../types';
+
+export const INITIAL_NOTIFICATIONS: AppNotification[] = [
+  {
+    id: 'notif-01',
+    title: 'Verification Flag Raised',
+    message: 'Batch GRD-2026-0893 flagged for inspector verification (Low confidence 62% & sprouting 14.2%).',
+    type: 'low_confidence',
+    timestamp: '2026-09-29T08:15:00Z',
+    read: false,
+    batchId: 'batch-demo-03',
+    reportId: 'REP-GRD-0893',
+  },
+  {
+    id: 'notif-02',
+    title: 'Batch Certified & Passport Issued',
+    message: 'Batch GRD-2026-0891 verified by Chief Inspector. Grade A passport issued with SHA-256 hash.',
+    type: 'verification_completed',
+    timestamp: '2026-09-27T10:15:00Z',
+    read: true,
+    batchId: 'batch-demo-01',
+    reportId: 'REP-GRD-0891',
+  },
+  {
+    id: 'notif-03',
+    title: 'Offline Queue Synchronized',
+    message: 'Local database synchronized 3 queued inspection records with central server.',
+    type: 'sync_completed',
+    timestamp: '2026-09-27T08:32:00Z',
+    read: true,
+  },
+  {
+    id: 'notif-04',
+    title: 'Lot Segregation Report Generated',
+    message: 'Commercial lots generated for GRD-2026-0891: Lot A (1,218 kg) & Lot B (232 kg).',
+    type: 'report_generated',
+    timestamp: '2026-09-27T10:30:00Z',
+    read: true,
+    batchId: 'batch-demo-01',
+  },
+];
+
+export const INITIAL_AUDIT_LOGS: AuditLog[] = [
+  {
+    id: 'audit-01',
+    timestamp: '2026-09-29T08:15:00Z',
+    actor: 'GRADFY-YOLO-VisionCore v2.4',
+    role: 'Automated AI Engine',
+    action: 'INSPECTION_FLAGGED',
+    details: 'Flagged batch GRD-2026-0893: Confidence score (62%) below configured 75% threshold.',
+    batchId: 'batch-demo-03',
+  },
+  {
+    id: 'audit-02',
+    timestamp: '2026-09-27T10:30:00Z',
+    actor: 'Sunita Mehta',
+    role: 'Buyer / Procurement Manager',
+    action: 'LOT_SEGREGATION_CREATED',
+    details: 'Allocated batch GRD-2026-0891 into Lot A (84%, Export) and Lot B (16%, Wholesale).',
+    batchId: 'batch-demo-01',
+  },
+  {
+    id: 'audit-03',
+    timestamp: '2026-09-27T10:12:00Z',
+    actor: 'Sanjay Deshmukh',
+    role: 'Chief Quality Inspector',
+    action: 'GRADE_VERIFIED',
+    details: 'Confirmed visual grading Grade A (OQI 88.5). Lot matches APMC premium export spec.',
+    batchId: 'batch-demo-01',
+  },
+  {
+    id: 'audit-04',
+    timestamp: '2026-09-27T08:40:00Z',
+    actor: 'Ramesh Patil',
+    role: 'Farmer / Producer',
+    action: 'BATCH_SUBMITTED',
+    details: 'Created batch GRD-2026-0891 (1,450 kg, 58 crates) with multi-angle capture.',
+    batchId: 'batch-demo-01',
+  },
+];

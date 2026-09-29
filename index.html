@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GRADFY — Intelligent Onion Quality Assessment, Grading & Traceability</title>
+    <meta name="description" content="Intelligent Onion Quality Assessment, Grading & Traceability Platform with AI Explainability, Smart Capture, and Offline Verification" />
+    <meta property="og:title" content="GRADFY — Intelligent Onion Quality Assessment, Grading & Traceability" />
+    <meta property="og:description" content="Intelligent Onion Quality Assessment, Grading & Traceability Platform with AI Explainability, Smart Capture, and Offline Verification" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
+  </head>
+  <body class="bg-[#fbf9f5] text-[#1f2421] antialiased selection:bg-[#c85a32] selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
